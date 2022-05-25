@@ -11,7 +11,7 @@ const OptionsPanel = ({ playing, numTiles, startGame, handleNumTileChange }) => 
     />
     <Button 
       playing={playing}
-      startGame={startGame}
+      startGame={() => startGame(numTiles)}
     />
   </div>
 )
