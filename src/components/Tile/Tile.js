@@ -2,7 +2,14 @@ import React from 'react'
 
 import './Tile.css'
 
-const Tile = ({ color, selected, matched, svg = () => null }) => {
+const Tile = ({ 
+  id,
+  color,
+  selected,
+  matched,
+  svg = () => null,
+  handleTileClicked = () => null,
+}) => {
   const isSelectedOrMatched = selected || matched;
   const style = isSelectedOrMatched ? { 'backgroundColor': color } : null;
   const Component = svg;
@@ -11,6 +18,7 @@ const Tile = ({ color, selected, matched, svg = () => null }) => {
     <div
       className='Tile'
       style={style}
+      onClick={() => handleTileClicked(id, color)}
     >
       {isSelectedOrMatched ? <Component /> : null}
     </div>
