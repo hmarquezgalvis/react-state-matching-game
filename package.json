@@ -1,5 +1,6 @@
 {
   "name": "game",
+  "homepage": "https://hmarquezgalvis.github.io/react-state-matching-game/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +15,9 @@
     "test:module-2": "jest test/module-2/",
     "test:module-3": "jest test/module-3/",
     "test:module-4": "jest test/module-4/",
-    "test:module-5": "jest test/module-5/"
+    "test:module-5": "jest test/module-5/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

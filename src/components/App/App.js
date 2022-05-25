@@ -18,7 +18,7 @@ class App extends Component{
     };
   }
 
-  startGame(numTiles) {
+  startGame = () => {
     this.setState((state) => ({
       ...state,
       playing: true,
@@ -28,7 +28,7 @@ class App extends Component{
     }));
   }
 
-  handleNumTileChange(num) {
+  handleNumTileChange = (num) => {
     this.setState((state) => ({
       ...state,
       numTiles: num,
@@ -37,7 +37,7 @@ class App extends Component{
     }));
   }
 
-  handleTileClicked(id, color) {
+  handleTileClicked = (id, color) => {
     this.setState((state) => {
       const tiles = state.tiles;
       let toBeCleared = state.toBeCleared;
